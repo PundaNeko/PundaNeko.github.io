@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jeremy Davis — Portfolio</title>
+  <title>Jeremy Davis — ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +24,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
       background: var(--bg);
       color: var(--ink);
       font-size: 15px;
@@ -43,7 +43,7 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-name {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Noto Serif JP', 'DM Serif Display', serif;
       font-size: 17px;
       letter-spacing: 0.01em;
       color: var(--ink);
@@ -79,10 +79,10 @@
       animation: fadeUp 0.6s ease forwards 0.1s;
     }
     .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
+      font-family: 'Noto Serif JP', 'DM Serif Display', serif;
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
       color: var(--ink);
       margin-bottom: 28px;
       opacity: 0;
@@ -96,7 +96,7 @@
       font-size: 17px;
       color: var(--muted);
       max-width: 520px;
-      line-height: 1.65;
+      line-height: 1.75;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.35s;
     }
@@ -137,7 +137,7 @@
       text-transform: uppercase;
     }
     .section-title {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Noto Serif JP', 'DM Serif Display', serif;
       font-size: 28px;
       letter-spacing: -0.01em;
     }
@@ -168,13 +168,13 @@
       margin-bottom: 6px;
     }
     .project-name {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Noto Serif JP', 'DM Serif Display', serif;
       font-size: 24px;
       letter-spacing: -0.01em;
-      line-height: 1.2;
+      line-height: 1.3;
     }
     .project-sub {
-      font-family: 'DM Mono', monospace;
+      font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
       font-size: 12px;
       color: var(--muted);
       margin-top: 4px;
@@ -203,7 +203,7 @@
     .project-desc {
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.85;
       margin-bottom: 24px;
     }
 
@@ -308,11 +308,11 @@
       padding: 24px;
     }
     .about-block h3 {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Noto Serif JP', serif;
       font-size: 18px;
       margin-bottom: 12px;
     }
-    .about-block p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+    .about-block p { font-size: 14px; color: var(--muted); line-height: 1.85; }
 
     /* ── FOOTER ── */
     footer {
@@ -355,19 +355,19 @@
 <nav>
   <a href="#" class="nav-name">Jeremy Davis</a>
   <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#about">About</a>
+    <a href="#projects">プロジェクト</a>
+    <a href="#skills">スキル</a>
+    <a href="#about">自己紹介</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-label">Software Engineer — Tokyo</div>
-  <h1>Building things<br>that <em>actually work.</em></h1>
+  <div class="hero-label">ソフトウェアエンジニア — 東京</div>
+  <h1>ちゃんと<em>動くものを</em><br>作る。</h1>
   <p class="hero-desc">
-    Self-taught developer with a focus on AI integration, real-time systems,
-    and data collection. Six personal projects spanning C#, Python, and Node.js.
+    独学のエンジニア。AIインテグレーション・リアルタイムシステム・データ収集を
+    中心に、C#・Python・Node.js を使った6つの個人プロジェクトを開発。
   </p>
   <div class="hero-stack">
     <span class="tag">C#</span>
@@ -386,16 +386,16 @@
 <section id="projects">
   <div class="section-header">
     <span class="section-num">01</span>
-    <h2 class="section-title">Selected Projects</h2>
+    <h2 class="section-title">主なプロジェクト</h2>
   </div>
 
-  <!-- P7: Crawler -->
+  <!-- P1: Crawler -->
   <div class="project">
     <div class="project-header">
       <div class="project-meta">
-        <div class="project-index">Project 01 — Python</div>
-        <div class="project-name">Web Crawler</div>
-        <div class="project-sub">Iterative scraper with async parallel processing</div>
+        <div class="project-index">プロジェクト 01 — Python</div>
+        <div class="project-name">Webクローラー</div>
+        <div class="project-sub">非同期並列処理による反復型スクレイパー</div>
       </div>
       <div class="project-langs">
         <span class="lang-tag">Python</span>
@@ -405,28 +405,28 @@
     </div>
     <hr class="project-divider">
     <p class="project-desc">
-      Built in three iterations: starting with a basic synchronous scraper, adding
-      User-Agent and Referer headers to bypass bot detection on live sites, then
-      migrating to async parallel requests with <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--code-bg);padding:1px 5px;border-radius:2px">aiohttp</code> + <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--code-bg);padding:1px 5px;border-radius:2px">asyncio.gather</code>
-      for a significant speed improvement. Each version solved a real problem
-      encountered in practice.
+      3つのバージョンを経て完成: 基本的な同期スクレイパーからスタートし、
+      実サイトでのBot検知を回避するためUser-AgentとRefererヘッダーを追加。
+      その後 <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--code-bg);padding:1px 5px;border-radius:2px">aiohttp</code> + <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--code-bg);padding:1px 5px;border-radius:2px">asyncio.gather</code>
+      による非同期並列リクエストに移行し、大幅な速度改善を実現。
+      各バージョンは実際に直面した問題を解決するために作られた。
     </p>
     <div class="highlights">
       <div class="highlight-item">
-        <div class="highlight-label">Version 1</div>
-        <div class="highlight-value">Sync scraper + URL filtering</div>
+        <div class="highlight-label">バージョン 1</div>
+        <div class="highlight-value">同期スクレイパー + URLフィルタリング</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Version 2</div>
-        <div class="highlight-value">Bot detection bypass via headers</div>
+        <div class="highlight-label">バージョン 2</div>
+        <div class="highlight-value">ヘッダーによるBot検知回避</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Version 3</div>
-        <div class="highlight-value">Async parallel with asyncio</div>
+        <div class="highlight-label">バージョン 3</div>
+        <div class="highlight-value">asyncioによる非同期並列処理</div>
       </div>
     </div>
     <div class="code-wrap">
-      <div class="code-label">main_async.py — parallel scraping core</div>
+      <div class="code-label">main_async.py — 並列スクレイピングのコア</div>
       <pre><span class="kw">async def</span> <span class="fn">scrape_title</span>(session, link):
     <span class="kw">async with</span> session.get(<span class="str">"https://runescape.wiki"</span> + link) <span class="kw">as</span> response:
         html = <span class="kw">await</span> response.text()
@@ -441,13 +441,13 @@
     </div>
   </div>
 
-  <!-- P4: Voice Cloning -->
+  <!-- P2: Voice Cloning -->
   <div class="project">
     <div class="project-header">
       <div class="project-meta">
-        <div class="project-index">Project 02 — Python</div>
-        <div class="project-name">Voice Cloning System</div>
-        <div class="project-sub">Real-time voice synthesis from audio samples</div>
+        <div class="project-index">プロジェクト 02 — Python</div>
+        <div class="project-name">音声クローニングシステム</div>
+        <div class="project-sub">音声サンプルからのリアルタイム音声合成</div>
       </div>
       <div class="project-langs">
         <span class="lang-tag">Python</span>
@@ -457,49 +457,48 @@
     </div>
     <hr class="project-divider">
     <p class="project-desc">
-      End-to-end pipeline that records a user's voice, processes it through an
-      encoder/synthesizer/vocoder architecture, and synthesizes arbitrary text
-      in that voice at 44.1kHz. Integrated Google Speech-to-Text for live
-      recognition input. Managing complex Python dependency trees across
-      version-sensitive libraries was a core challenge.
+      ユーザーの声を録音し、エンコーダー／シンセサイザー／ボコーダー構成のアーキテクチャで処理し、
+      その声で任意のテキストを44.1kHzで合成するエンドツーエンドのパイプライン。
+      ライブ認識入力としてGoogle Speech-to-Textを統合。
+      バージョン依存性の高いライブラリ間での複雑なPython依存関係の管理が主な技術的課題だった。
     </p>
     <div class="highlights">
       <div class="highlight-item">
-        <div class="highlight-label">Input</div>
-        <div class="highlight-value">10s mic recording or existing WAV</div>
+        <div class="highlight-label">入力</div>
+        <div class="highlight-value">10秒のマイク録音または既存のWAVファイル</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Output</div>
-        <div class="highlight-value">44.1kHz cloned voice WAV</div>
+        <div class="highlight-label">出力</div>
+        <div class="highlight-value">44.1kHzのクローン音声WAVファイル</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Pipeline</div>
-        <div class="highlight-value">Record → STT → Clone → Synthesize</div>
+        <div class="highlight-label">パイプライン</div>
+        <div class="highlight-value">録音 → STT → クローン → 合成</div>
       </div>
     </div>
     <div class="code-wrap">
-      <div class="code-label">voicetest.py — cloning core</div>
+      <div class="code-label">voicetest.py — クローニングコア</div>
       <pre><span class="kw">def</span> <span class="fn">generate_voice</span>(sound_path, speech_text, output_path):
     preprocessed_wav = encoder.preprocess_wav(sound_path)
     embed = encoder.embed_utterance(preprocessed_wav)
 
-    <span class="cm"># Spectrogram synthesis → waveform generation</span>
+    <span class="cm"># スペクトログラム合成 → 波形生成</span>
     specs = synthesizer.synthesize_spectrograms([speech_text], [embed])
     generated_wav = vocoder.infer_waveform(specs)
 
-    <span class="cm"># Save at 44.1kHz</span>
+    <span class="cm"># 44.1kHzで保存</span>
     sf.write(output_path, generated_wav.astype(np.float32),
              Synthesizer.sample_rate)</pre>
     </div>
   </div>
 
-  <!-- P1: Rule-based Chatbot -->
+  <!-- P3: Rule-based Chatbot -->
   <div class="project">
     <div class="project-header">
       <div class="project-meta">
-        <div class="project-index">Project 03 — C#</div>
-        <div class="project-name">Voice-Enabled Chatbot</div>
-        <div class="project-sub">JSON rule engine with speech recognition</div>
+        <div class="project-index">プロジェクト 03 — C#</div>
+        <div class="project-name">音声対応チャットボット</div>
+        <div class="project-sub">JSONルールエンジンと音声認識の統合</div>
       </div>
       <div class="project-langs">
         <span class="lang-tag">C#</span>
@@ -509,27 +508,27 @@
     </div>
     <hr class="project-divider">
     <p class="project-desc">
-      Conversational chatbot driven by a JSON rule engine. Patterns are loaded
-      dynamically at runtime and matched using compiled Regex for performance
-      across 1000+ rules. Supports both text input and live microphone
-      recognition via System.Speech, with full voice synthesis for responses.
+      JSONルールエンジンによる会話型チャットボット。パターンは実行時に動的に読み込まれ、
+      コンパイル済みRegexを使用して1000以上のルールに対して高速にマッチング。
+      テキスト入力とSystem.Speechによるライブマイク認識の両方をサポートし、
+      応答には完全な音声合成を使用。
     </p>
     <div class="highlights">
       <div class="highlight-item">
-        <div class="highlight-label">Rules</div>
-        <div class="highlight-value">Dynamic JSON loading at runtime</div>
+        <div class="highlight-label">ルール</div>
+        <div class="highlight-value">実行時のJSONによる動的読み込み</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Matching</div>
-        <div class="highlight-value">Compiled Regex, 1000+ patterns</div>
+        <div class="highlight-label">マッチング</div>
+        <div class="highlight-value">コンパイル済みRegex、1000以上のパターン</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Input</div>
-        <div class="highlight-value">Text + live microphone</div>
+        <div class="highlight-label">入力</div>
+        <div class="highlight-value">テキスト + ライブマイク</div>
       </div>
     </div>
     <div class="code-wrap">
-      <div class="code-label">ChatBot.cs — dynamic rule loading</div>
+      <div class="code-label">ChatBot.cs — 動的ルール読み込み</div>
       <pre><span class="kw">var</span> data = JsonSerializer.Deserialize&lt;Root&gt;(json);
 <span class="kw">foreach</span> (<span class="kw">var</span> rule <span class="kw">in</span> data.rules)
 {
@@ -540,19 +539,19 @@
     });
 }
 
-<span class="cm">// Real-time speech recognition</span>
+<span class="cm">// リアルタイム音声認識</span>
 _recognizer.LoadGrammar(<span class="kw">new</span> DictationGrammar());
 _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     </div>
   </div>
 
-  <!-- P2: LLM Chatbot -->
+  <!-- P4: LLM Chatbot -->
   <div class="project">
     <div class="project-header">
       <div class="project-meta">
-        <div class="project-index">Project 04 — C#</div>
-        <div class="project-name">LLM-Integrated Chatbot</div>
-        <div class="project-sub">Hybrid AI with full conversation persistence</div>
+        <div class="project-index">プロジェクト 04 — C#</div>
+        <div class="project-name">LLM統合チャットボット</div>
+        <div class="project-sub">完全な会話永続化を備えたハイブリッドAI</div>
       </div>
       <div class="project-langs">
         <span class="lang-tag">C#</span>
@@ -562,27 +561,27 @@ _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     </div>
     <hr class="project-divider">
     <p class="project-desc">
-      Extended the rule-based chatbot with OpenRouter LLM integration, combining
-      Regex rule responses with large language model inference. Every conversation
-      turn — including token counts and model used — is persisted to SQL Server
-      LocalDB for analysis. Async/await throughout to keep the UI responsive.
+      ルールベースのチャットボットをOpenRouterのLLM統合で拡張し、
+      Regexルール応答と大規模言語モデルの推論を組み合わせたハイブリッド構成。
+      会話のすべてのターン（トークン数と使用モデルを含む）をSQL Server LocalDBに永続化して分析に活用。
+      UIのレスポンシブ性を保つためAsync/awaitを全体に採用。
     </p>
     <div class="highlights">
       <div class="highlight-item">
-        <div class="highlight-label">Architecture</div>
-        <div class="highlight-value">Hybrid: rules + LLM fallback</div>
+        <div class="highlight-label">アーキテクチャ</div>
+        <div class="highlight-value">ハイブリッド：ルール + LLMフォールバック</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Persistence</div>
-        <div class="highlight-value">Full history with token tracking</div>
+        <div class="highlight-label">永続化</div>
+        <div class="highlight-value">トークン追跡付き完全履歴保存</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Async</div>
-        <div class="highlight-value">Non-blocking UI via async/await</div>
+        <div class="highlight-label">非同期処理</div>
+        <div class="highlight-value">async/awaitによるノンブロッキングUI</div>
       </div>
     </div>
     <div class="code-wrap">
-      <div class="code-label">AdvancedChatbot.cs — SQL persistence</div>
+      <div class="code-label">AdvancedChatbot.cs — SQL永続化</div>
       <pre><span class="kw">private async</span> Task <span class="fn">InsertIntoSQL</span>(
     <span class="kw">string</span> userId, <span class="kw">string</span> role,
     <span class="kw">string</span> content, <span class="kw">string</span> modelUsed, <span class="kw">int</span> tokensUsed)
@@ -597,13 +596,13 @@ _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     </div>
   </div>
 
-  <!-- P8: Interactive Portfolio Site -->
+  <!-- P5: Interactive Portfolio Site -->
   <div class="project">
     <div class="project-header">
       <div class="project-meta">
-        <div class="project-index">Project 05 — HTML / CSS / JS</div>
-        <div class="project-name">Interactive Portfolio Site</div>
-        <div class="project-sub">Book-style UI with flashlight effect and puzzle mechanic</div>
+        <div class="project-index">プロジェクト 05 — HTML / CSS / JS</div>
+        <div class="project-name">インタラクティブ・ポートフォリオサイト</div>
+        <div class="project-sub">フラッシュライト効果とパズル機能を持つ本型UI</div>
       </div>
       <div class="project-langs">
         <span class="lang-tag">JavaScript</span>
@@ -613,34 +612,35 @@ _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     </div>
     <hr class="project-divider">
     <p class="project-desc">
-      A personal website built as an interactive book. Pages turn via a CSS scroll-timeline
-      carousel with a sprite-animated book background. A custom quill cursor replaces the
-      default pointer, and a radial-gradient flashlight effect tracks the mouse in real time
-      using CSS custom properties updated via JavaScript. Hidden across the pages is a
-      password puzzle — the user collects numbers through minigames and lore text, then
-      enters them on the final page to unlock a light switch that reveals the full site.
+      インタラクティブな本として設計された個人サイト。ページはCSSスクロールタイムライン
+      カルーセルで切り替わり、スプライトアニメーションの本の背景が動く。
+      カスタム羽ペンカーソルがデフォルトのポインターを置き換え、
+      JavaScriptで更新されるCSSカスタムプロパティを使ってラジアルグラデーションの
+      フラッシュライト効果がリアルタイムでマウスを追跡する。
+      ページ全体に隠されたパスワードパズルがあり、ユーザーはミニゲームとロアテキストから
+      数字を集め、最終ページで入力することで照明スイッチをアンロックし、サイトの全体を表示できる。
     </p>
     <div class="highlights">
       <div class="highlight-item">
-        <div class="highlight-label">Cursor</div>
-        <div class="highlight-value">Custom quill image replaces pointer</div>
+        <div class="highlight-label">カーソル</div>
+        <div class="highlight-value">カスタム羽ペン画像でポインターを置換</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Flashlight</div>
-        <div class="highlight-value">Radial gradient via CSS vars + JS</div>
+        <div class="highlight-label">フラッシュライト</div>
+        <div class="highlight-value">CSSカスタムプロパティ + JSによるラジアルグラデーション</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Carousel</div>
-        <div class="highlight-value">CSS scroll-timeline + sprite animation</div>
+        <div class="highlight-label">カルーセル</div>
+        <div class="highlight-value">CSSスクロールタイムライン + スプライトアニメーション</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-label">Puzzle</div>
-        <div class="highlight-value">5-digit password hidden across pages</div>
+        <div class="highlight-label">パズル</div>
+        <div class="highlight-value">ページ全体に隠された5桁のパスワード</div>
       </div>
     </div>
     <div class="code-wrap">
-      <div class="code-label">flashlight.js — real-time cursor tracking</div>
-      <pre><span class="cm">// CSS custom properties updated on every mousemove</span>
+      <div class="code-label">flashlight.js — リアルタイムカーソル追跡</div>
+      <pre><span class="cm">// マウス移動のたびにCSSカスタムプロパティを更新</span>
 <span class="kw">const</span> flashlight = document.getElementById(<span class="str">'flashlight'</span>);
 
 document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
@@ -648,12 +648,12 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
   flashlight.style.setProperty(<span class="str">'--Ypos'</span>, e.clientY + <span class="str">'px'</span>);
 });
 
-<span class="cm">// CSS reads the vars to position the radial gradient:</span>
+<span class="cm">// CSSはその変数を読んでラジアルグラデーションを配置:</span>
 <span class="cm">// background: radial-gradient(circle 10em at var(--Xpos) var(--Ypos), ...)</span></pre>
     </div>
     <div class="code-wrap">
-      <div class="code-label">learning.css — CSS scroll-timeline sprite animation</div>
-      <pre><span class="cm">/* Book sprite advances frame as carousel scrolls */</span>
+      <div class="code-label">learning.css — CSSスクロールタイムラインによるスプライトアニメーション</div>
+      <pre><span class="cm">/* カルーセルのスクロールに合わせて本スプライトのフレームが進む */</span>
 <span class="fn">.sprite</span> {
   animation: frame var(--sprite-as) linear;
   animation-timeline: --carousel-timeline;
@@ -671,46 +671,46 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
 <section id="skills">
   <div class="section-header">
     <span class="section-num">02</span>
-    <h2 class="section-title">Technical Skills</h2>
+    <h2 class="section-title">技術スキル</h2>
   </div>
   <div class="skills-grid">
     <div class="skill-cell">
-      <div class="skill-cell-label">Languages</div>
+      <div class="skill-cell-label">言語</div>
       <ul class="skill-list">
-        <li>C# — Advanced</li>
-        <li>Python — Intermediate</li>
-        <li>JavaScript / Node.js — Intermediate</li>
+        <li>C# — 上級</li>
+        <li>Python — 中級</li>
+        <li>JavaScript / Node.js — 中級</li>
       </ul>
     </div>
     <div class="skill-cell">
-      <div class="skill-cell-label">Frameworks & Libraries</div>
+      <div class="skill-cell-label">フレームワーク・ライブラリ</div>
       <ul class="skill-list">
         <li>.NET / WinForms</li>
         <li>Express.js / Socket.IO</li>
         <li>aiohttp / BeautifulSoup4</li>
-        <li>Unity (Splines, Coroutine)</li>
+        <li>Unity（Splines, Coroutine）</li>
       </ul>
     </div>
     <div class="skill-cell">
-      <div class="skill-cell-label">Data & AI</div>
+      <div class="skill-cell-label">データ・AI</div>
       <ul class="skill-list">
         <li>MySQL / SQL Server</li>
         <li>OpenRouter LLM API</li>
         <li>Google Speech-to-Text</li>
-        <li>Voice synthesis pipeline</li>
+        <li>音声合成パイプライン</li>
       </ul>
     </div>
     <div class="skill-cell">
-      <div class="skill-cell-label">Concepts</div>
+      <div class="skill-cell-label">概念・手法</div>
       <ul class="skill-list">
-        <li>async/await & concurrency</li>
-        <li>REST API design</li>
-        <li>WebSocket / real-time</li>
-        <li>Web scraping & crawling</li>
+        <li>async/await と並行処理</li>
+        <li>REST API設計</li>
+        <li>WebSocket / リアルタイム通信</li>
+        <li>Webスクレイピング・クローリング</li>
       </ul>
     </div>
     <div class="skill-cell">
-      <div class="skill-cell-label">Tools</div>
+      <div class="skill-cell-label">ツール</div>
       <ul class="skill-list">
         <li>Git / GitHub</li>
         <li>Visual Studio / VS Code</li>
@@ -718,11 +718,11 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
       </ul>
     </div>
     <div class="skill-cell">
-      <div class="skill-cell-label">Currently Learning</div>
+      <div class="skill-cell-label">現在学習中</div>
       <ul class="skill-list">
-        <li>Ruby (Crawlers)</li>
-        <li>Linux server-side dev</li>
-        <li>Cloud deployment</li>
+        <li>Ruby（クローラー）</li>
+        <li>Linuxサーバーサイド開発</li>
+        <li>クラウドデプロイ</li>
       </ul>
     </div>
   </div>
@@ -732,37 +732,32 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
 <section id="about">
   <div class="section-header">
     <span class="section-num">03</span>
-    <h2 class="section-title">About</h2>
+    <h2 class="section-title">自己紹介</h2>
   </div>
   <div class="about-grid">
     <div class="about-block">
-      <h3>Background</h3>
-      <p>Self-taught developer based in Tokyo. Built seven personal projects
-      across C#, Python, and JavaScript — covering AI integration, real-time
-      communication, voice synthesis, game development, and web data collection.
-      Each project was driven by a real problem and iterated until it worked.</p>
+      <h3>バックグラウンド</h3>
+      <p>東京在住の独学エンジニア。C#・Python・JavaScriptを使い、AIインテグレーション・
+      リアルタイム通信・音声合成・ゲーム開発・Webデータ収集をカバーする
+      7つの個人プロジェクトを開発。すべてのプロジェクトは実際の問題から生まれ、
+      動くまで繰り返し改善してきた。</p>
     </div>
     <div class="about-block">
-      <h3>Approach</h3>
-      <p>When I hit a wall, I read the docs and find a way through.
-      The voice cloning project required managing complex Python dependency trees;
-      the crawler evolved through three versions to solve real scraping problems.
-      I build things to learn, then learn more by building the next thing.</p>
+      <h3>取り組み方</h3>
+      <p>壁にぶつかったときは、ドキュメントを読んで突破口を見つける。
+      音声クローニングプロジェクトでは複雑なPythonの依存関係の管理が必要だったし、
+      クローラーは実際のスクレイピング問題を解決するために3つのバージョンを経て進化した。
+      作ることで学び、次を作ることでさらに深く学ぶ。</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>Jeremy Davis — Tokyo, Japan</p>
-  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bed4dbccdbd3c790dadfc8d7cdfedbc6dfd3ced2db90ddd1d3">[email&#160;protected]</a></p>
+  <p>Jeremy Davis — 東京、日本</p>
+  <p>jeremy@example.com</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Intersection observer for project cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isInters
 <script>
   const projects = document.querySelectorAll('.project');
   projects.forEach(p => p.classList.add('animate'));
