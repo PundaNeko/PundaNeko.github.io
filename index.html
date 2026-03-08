@@ -331,6 +331,36 @@
       letter-spacing: 0.06em;
     }
 
+    /* ── PROJECT LINKS ── */
+    .project-links {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--muted);
+      background: var(--surface);
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .project-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--bg);
+    }
+    .project-link svg {
+      flex-shrink: 0;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .project-link:hover svg { opacity: 1; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -357,7 +387,7 @@
   <div class="nav-links">
     <a href="#projects">プロジェクト</a>
     <a href="#skills">スキル</a>
-    <a href="#about">自己紹介</a>
+    <a href="#about">理念</a>
   </div>
 </nav>
 
@@ -379,6 +409,31 @@
     <span class="tag">BeautifulSoup</span>
     <span class="tag">LLM API</span>
     <span class="tag">Unity</span>
+  </div>
+
+  <div style="margin-top:56px; padding-top:40px; border-top:1px solid var(--border); max-width:620px; opacity:0; animation: fadeUp 0.7s ease forwards 0.65s;">
+    <p style="font-size:15px; color:var(--muted); line-height:2; margin-bottom:20px;">
+      プログラミングと出会ったのは高校の授業だった。C言語でアルゴリズムの問題を解き、
+      CS50のカリキュラムをひたすら追いかける——当時は「動く」というより「正解する」
+      ことを目的にコードを書いていた。楽しくはあったが、何かが足りなかった。
+    </p>
+    <p style="font-size:15px; color:var(--muted); line-height:2; margin-bottom:20px;">
+      転機はゲームだった。コードが画面の中で何かを動かす瞬間を初めて目の当たりにしたとき、
+      「これだ」と思った。キャラクターが走り、弾が飛び、スコアが跳ね上がる——
+      数行の記述が現実の体験に変わる。その感覚は今も変わらない。
+      さらに家業のIT導入を間近で見て、プログラミングが仕事や生活を変える力を持つことも知った。
+      ゲームと実務、両方の文脈でこの力を使いたいと思うようになった。
+    </p>
+    <p style="font-size:15px; color:var(--muted); line-height:2; margin-bottom:20px;">
+      それからは独学で走り続けている。C#でチャットボットを作り、Pythonで声を複製し、
+      非同期クローラーを3度書き直した。12人のチームでゲームを作り、東京ゲームショウに出した。
+      ひとつ作るたびに次に作りたいものが増える。その連鎖がまだ続いている。
+    </p>
+    <p style="font-size:15px; color:var(--muted); line-height:2;">
+      東京に住んでいる。四季の景色が好きで、桜の季節になると少し浮かれる。
+      日本語もまだ学んでいる途中で、コードと同じく壁にぶつかるたびに調べて進んでいる。
+      まだ途中だが、確実に前に進んでいる——それで十分だと思っている。
+    </p>
   </div>
 </div>
 
@@ -439,6 +494,12 @@
         tasks = [scrape_title(session, link) <span class="kw">for</span> link <span class="kw">in</span> links]
         results = <span class="kw">await</span> asyncio.gather(*tasks, return_exceptions=<span class="kw">True</span>)</pre>
     </div>
+    <div class="project-links">
+      <a class="project-link" href="https://github.com/PundaNeko/Python-Crawler" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub — Python-Crawler
+      </a>
+    </div>
   </div>
 
   <!-- P2: Voice Cloning -->
@@ -489,6 +550,12 @@
     <span class="cm"># 44.1kHzで保存</span>
     sf.write(output_path, generated_wav.astype(np.float32),
              Synthesizer.sample_rate)</pre>
+    </div>
+    <div class="project-links">
+      <a class="project-link" href="https://github.com/PundaNeko/VoiceGeneration" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub — VoiceGeneration
+      </a>
     </div>
   </div>
 
@@ -543,6 +610,12 @@
 _recognizer.LoadGrammar(<span class="kw">new</span> DictationGrammar());
 _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     </div>
+    <div class="project-links">
+      <a class="project-link" href="https://github.com/PundaNeko/Chatbot-public" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub — Chatbot-public
+      </a>
+    </div>
   </div>
 
   <!-- P4: LLM Chatbot -->
@@ -593,6 +666,12 @@ _recognizer.RecognizeAsync(RecognizeMode.Multiple);</pre>
     cmd.Parameters.AddWithValue(<span class="str">"@tokensUsed"</span>, tokensUsed);
     <span class="kw">await</span> cmd.ExecuteNonQueryAsync();
 }</pre>
+    </div>
+    <div class="project-links">
+      <a class="project-link" href="https://github.com/PundaNeko/Chatbot-public/tree/AI-puilic" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub — AI-puilic branch
+      </a>
     </div>
   </div>
 
@@ -663,6 +742,207 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
   <span class="kw">to</span> { --sprite-fs: var(--sprite-fe); }
 }</pre>
     </div>
+    <div class="project-links">
+      <a class="project-link" href="puzzle.html" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        サイトを見る — puzzle.html
+      </a>
+    </div>
+  </div>
+
+  <!-- P6: Noob Education -->
+  <div class="project">
+    <div class="project-header">
+      <div class="project-meta">
+        <div class="project-index">プロジェクト 06 — Unity / C#</div>
+        <div class="project-name">Noob Education</div>
+        <div class="project-sub">12人チーム制作のオンレール・シューティングゲーム</div>
+      </div>
+      <div class="project-langs">
+        <span class="lang-tag">Unity</span>
+        <span class="lang-tag alt">C#</span>
+        <span class="lang-tag alt">Game Dev</span>
+      </div>
+    </div>
+    <hr class="project-divider">
+    <p class="project-desc">
+      これまでで最大規模のプロジェクト。12人のチームで数ヶ月かけて開発したオンレール・
+      シューティングゲームで、自分はメインプログラマーを担当した。
+      敵のスポーンシステム・プレイヤーの移動と射撃・UI/HUD・ゲームステート管理まで、
+      コアシステムのほぼすべてを一人で設計・実装。
+      東京ゲームショウ（TGS）と学校の展示会に出展し、300人以上のプレイヤーから
+      <strong style="color:var(--ink)">85%の支持率</strong>を獲得した。
+      ソロプロジェクトとは次元の違うプレッシャー——11人のチームメンバーが自分のコードの上で
+      作業しており、300人の見知らぬプレイヤーが本番環境でプレイする。
+      壊れる余裕はなかった。
+    </p>
+    <div class="highlights">
+      <div class="highlight-item">
+        <div class="highlight-label">チーム規模</div>
+        <div class="highlight-value">12人（メインプログラマー）</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-label">出展</div>
+        <div class="highlight-value">東京ゲームショウ・学校展示会</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-label">評価</div>
+        <div class="highlight-value">300人超のプレイヤーから85%支持</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-label">期間</div>
+        <div class="highlight-value">数ヶ月にわたる開発</div>
+      </div>
+    </div>
+    <div class="code-wrap">
+      <div class="code-label">Calibrator.cs — マウスキャリブレーション（抜粋）</div>
+      <pre><span class="cm">// TGS・展示会では様々なマウスやDPI環境でプレイされるため、</span>
+<span class="cm">// プレイ開始前にスクリーン座標とワールド座標のズレを計測・補正する仕組みを実装。</span>
+<span class="kw">void</span> <span class="fn">Calibrate</span>()
+{
+    <span class="cm">// Step 1: 画面中央のターゲットでオフセット（絶対ズレ）を計測</span>
+    <span class="kw">if</span> (!centerCalibrated)
+    {
+        Vector2 targetLocal, mouseLocal;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            aimer.canvas.transform <span class="kw">as</span> RectTransform,
+            Camera.main.WorldToScreenPoint(initialTargetCoords), <span class="kw">null</span>, <span class="kw">out</span> targetLocal);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            aimer.canvas.transform <span class="kw">as</span> RectTransform,
+            Input.mousePosition, <span class="kw">null</span>, <span class="kw">out</span> mouseLocal);
+
+        <span class="cm">// マウス位置とターゲット位置の差分をオフセットとして保存</span>
+        aimer.offsetX = targetLocal.x - mouseLocal.x;
+        aimer.offsetY = targetLocal.y - mouseLocal.y;
+        centerCalibrated = <span class="kw">true</span>;
+        <span class="kw">return</span>;
+    }
+
+    <span class="cm">// Step 2: 上下左右2点のターゲットでスケール差（感度倍率）を計算</span>
+    <span class="cm">// マウスの移動量と実際のターゲット間距離の比率を平均して倍率を導出</span>
+    <span class="kw">float</span> avgYMult = ((mouseY[<span class="num">1</span>] - mouseY[<span class="num">0</span>]) / (targetY[<span class="num">1</span>] - targetY[<span class="num">0</span>])
+                    + (mouseY[<span class="num">2</span>] - mouseY[<span class="num">0</span>]) / (targetY[<span class="num">2</span>] - targetY[<span class="num">0</span>])) / <span class="num">2f</span>;
+    <span class="kw">float</span> avgXMult = ((mouseX[<span class="num">1</span>] - mouseX[<span class="num">0</span>]) / (targetX[<span class="num">1</span>] - targetX[<span class="num">0</span>])
+                    + (mouseX[<span class="num">2</span>] - mouseX[<span class="num">0</span>]) / (targetX[<span class="num">2</span>] - targetX[<span class="num">0</span>])) / <span class="num">2f</span>;
+
+    <span class="cm">// 倍率が1未満（縮小方向）になるケースは想定外なのでクランプ</span>
+    aimer.multiplierX = Mathf.Max(avgXMult, <span class="num">1f</span>);
+    aimer.multiplierY = Mathf.Max(avgYMult, <span class="num">1f</span>);
+    aimer.crosshair.gameObject.SetActive(<span class="kw">true</span>);
+}</pre>
+    </div>
+    <div class="code-wrap">
+      <div class="code-label">GroupObserver.cs — ウェーブ進行管理（抜粋）</div>
+      <pre><span class="cm">// 敵が全滅したときに呼ばれる。次のウェーブ・移動・ダイアログを順番に処理する。</span>
+<span class="kw">public void</span> <span class="fn">ReduceEnemies</span>()
+{
+    remainingEnemies--;
+    <span class="kw">if</span> (remainingEnemies > <span class="num">0</span>) <span class="kw">return</span>; <span class="cm">// まだ敵が残っている</span>
+
+    outliner.ResetOutline();
+
+    <span class="cm">// キャリーオーバータイマーが動いていれば止めて攻撃トラッカーを再開</span>
+    <span class="kw">if</span> (carryOverCoroutine != <span class="kw">null</span>)
+    {
+        StopCoroutine(carryOverCoroutine);
+        carryOverCoroutine = <span class="kw">null</span>;
+        EnemyAttackTracker.Instance.enabled = <span class="kw">true</span>;
+    }
+    ProcessNextWave();
+}
+
+<span class="cm">// 次のウェーブタイプ（移動 or スポーン）に応じて処理を分岐するコルーチン</span>
+<span class="kw">private</span> IEnumerator <span class="fn">ProcessNextWaveRoutine</span>(NextGroupType.GroupType nextType)
+{
+    <span class="cm">// グループの最終ウェーブだった場合はスコアを表示してから進む</span>
+    <span class="kw">if</span> (isNextGroupEnd)
+        <span class="kw">yield return</span> StartCoroutine(UIController.Instance.levelScore.ShowScore(<span class="kw">false</span>));
+
+    <span class="kw">if</span> (nextType == NextGroupType.GroupType.Move)
+    {
+        <span class="cm">// プレイヤーを次のスプライン区間へ移動（オンレールの核心部分）</span>
+        playerRef.GetComponent&lt;SplineMovement&gt;().ChangeCurrentSpline();
+    }
+    <span class="kw">else if</span> (nextType == NextGroupType.GroupType.Spawn)
+    {
+        <span class="cm">// キューから次のウェーブを取り出してスポーン</span>
+        activeWave = enemyWaves[<span class="num">0</span>];
+        enemyWaves.RemoveAt(<span class="num">0</span>);
+        SpawnEnemies();
+    }
+}</pre>
+    </div>
+    <div class="code-wrap">
+      <div class="code-label">PointerLocator.cs — 射撃ヒット検出とキャッシュ（抜粋）</div>
+      <pre><span class="cm">// スコープ有無でレイの起点が変わるが、ヒット処理は共通。</span>
+<span class="cm">// 通常時: スクリーン上の照準位置からレイを飛ばす</span>
+<span class="cm">// スコープ時: セカンドカメラの向きから直接レイを飛ばす</span>
+<span class="kw">void</span> <span class="fn">HitDetection</span>()
+{
+    <span class="kw">if</span> (!scopeController.scoped) NonScopedHitDetection();
+    <span class="kw">else</span>                         ScopedHitDetection();
+}
+
+<span class="kw">void</span> <span class="fn">NonScopedHitDetection</span>()
+{
+    Ray ray = Camera.main.ScreenPointToRay(crosshair.transform.position);
+    <span class="kw">if</span> (!Physics.Raycast(ray, <span class="kw">out</span> RaycastHit hit, Mathf.Infinity, shootableMasks)) <span class="kw">return</span>;
+
+    EnemyHitManager enemy = <span class="fn">GetCachedEnemy</span>(hit.collider.gameObject);
+    <span class="kw">if</span> (enemy != <span class="kw">null</span>)
+    {
+        enemy.Shot();
+        <span class="cm">// ヒットマーカーのフェードが途中なら中断して再生</span>
+        <span class="kw">if</span> (hitMarkerFade != <span class="kw">null</span>) StopCoroutine(hitMarkerFade);
+        hitMarkerFade = StartCoroutine(ShowHitMarker());
+        <span class="kw">if</span> (!enemy.isTarget) Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal)).Play();
+    }
+    Instantiate(sparkEffect, hit.point, Quaternion.LookRotation(hit.normal)).Play();
+}
+
+<span class="cm">// GetComponent は毎フレーム呼ぶとコストが高いためDictionaryでキャッシュ</span>
+<span class="kw">private</span> Dictionary&lt;GameObject, EnemyHitManager&gt; enemyCache
+    = <span class="kw">new</span> Dictionary&lt;GameObject, EnemyHitManager&gt;();
+
+<span class="kw">private</span> EnemyHitManager <span class="fn">GetCachedEnemy</span>(GameObject go)
+{
+    <span class="kw">if</span> (!enemyCache.TryGetValue(go, <span class="kw">out var</span> enemy))
+    {
+        enemy = go.GetComponentInParent&lt;EnemyHitManager&gt;();
+        enemyCache[go] = enemy; <span class="cm">// 初回のみ検索、以降はキャッシュから返す</span>
+    }
+    <span class="kw">return</span> enemy;
+}</pre>
+    </div>
+    <div class="code-wrap">
+      <div class="code-label">LifeController.cs — ライフ管理プロパティ（抜粋）</div>
+      <pre><span class="cm">// livesをプロパティにすることで、値の変更が必ずこのセッターを通るように強制。</span>
+<span class="cm">// 上限クランプ・ゲームオーバー判定・HUD再描画を一箇所に集約している。</span>
+<span class="kw">public float</span> lives
+{
+    <span class="kw">get</span> { <span class="kw">return</span> _lives; }
+    <span class="kw">set</span>
+    {
+        <span class="cm">// 上限を超えた回復は切り捨て</span>
+        <span class="kw">if</span> (value > maxLives) value = maxLives;
+
+        <span class="cm">// 0以下でゲームオーバー画面へ遷移</span>
+        <span class="kw">if</span> (value <= <span class="num">0</span>)
+        {
+            UIController.Instance.timerController.ShowResult();
+            value = <span class="num">0</span>;
+        }
+        _lives = value;
+        RedrawLives(); <span class="cm">// 常にHUDと同期</span>
+    }
+}</pre>
+    </div>
+    <div class="project-links">
+      <a class="project-link" href="#" style="pointer-events:none; opacity:0.45;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        ソースコード非公開（学校の財産）
+      </a>
+    </div>
   </div>
 
 </section>
@@ -732,30 +1012,28 @@ document.addEventListener(<span class="str">'mousemove'</span>, (e) => {
 <section id="about">
   <div class="section-header">
     <span class="section-num">03</span>
-    <h2 class="section-title">自己紹介</h2>
+    <h2 class="section-title">制作理念</h2>
   </div>
-  <div class="about-grid">
-    <div class="about-block">
-      <h3>バックグラウンド</h3>
-      <p>東京在住の独学エンジニア。C#・Python・JavaScriptを使い、AIインテグレーション・
-      リアルタイム通信・音声合成・ゲーム開発・Webデータ収集をカバーする
-      7つの個人プロジェクトを開発。すべてのプロジェクトは実際の問題から生まれ、
-      動くまで繰り返し改善してきた。</p>
-    </div>
-    <div class="about-block">
-      <h3>取り組み方</h3>
-      <p>壁にぶつかったときは、ドキュメントを読んで突破口を見つける。
+  <div class="about-block" style="max-width:680px;">
+    <p style="font-size:15px; color:var(--muted); line-height:2; margin-bottom:20px;">
+      壁にぶつかったときは、ドキュメントを読んで突破口を見つける。
       音声クローニングプロジェクトでは複雑なPythonの依存関係の管理が必要だったし、
       クローラーは実際のスクレイピング問題を解決するために3つのバージョンを経て進化した。
-      作ることで学び、次を作ることでさらに深く学ぶ。</p>
-    </div>
+      チームプロジェクトでは11人が自分のコードの上で作業していた——
+      壊れたとき、来るのは自分のところだ。それがよかった。
+    </p>
+    <p style="font-size:15px; color:var(--muted); line-height:2;">
+      現在はRubyとLinuxサーバーサイド開発を学びながら、クラウドデプロイにも手を伸ばしている。
+      作ることで学び、次を作ることでさらに深く学ぶ——そのサイクルに終わりはないし、
+      終わらせるつもりもない。
+    </p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>Jeremy Davis — 東京、日本</p>
-  <p>jeremy@example.com</p>
+  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c46495e4941556c49544d415c4049024f4341">[email&#160;protected]</a></p>
 </footer>
 
 <script>
